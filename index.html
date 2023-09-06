@@ -5,25 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
-    <div class="wrapper">
 
-        <div class="container">
+
+    <div class="wrapper2">
+        <svg>
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                Welcome to my portfolio
+            </text>
+        </svg>
+    </div>
+
+
+    <div class="wrapper active">
+
+        <div class="container active">
 
 
         
 
-        <nav class="navbar">
+        <nav class="navbar" >
             <div class="nav">
-              <div class="logo"><p>Nishant</p></div>
+              <div class="logo" ><p>Nishant</p></div>
 
               <div class="navigation-options">
-                  <div><a href="#home" class="options">Home</a></div>
-                  <div><a href="#About" class="options">About</a></div>
-                  <div><a href="#Skill" class="options">Skill</a></div>
-                  <div><a href="#Project" class="options">Project</a></div>
-                  <div><a href="#Contact" class="options">Contact</a></div>
+                  <div><a href="#home" class="options" data-aos="fade-right">Home</a></div>
+                  <div><a href="#About" class="options" data-aos="fade-right">About</a></div>
+                  <div><a href="#Skill" class="options" data-aos="fade-right">Skill</a></div>
+                  <div><a href="#Project" class="options" data-aos="fade-right">Project</a></div>
+                  <div><a href="#Contact" class="options" data-aos="fade-right">Contact</a></div>
               </div>
             </div>
         </nav>
@@ -32,12 +45,12 @@
             
             <div class="left-intro-container">
                 <p class="greetings">Hi Everyone, I am</p>
-                <p class="name">Nishant Rai</p>
+                <p class="name" ><span id="name">Nishant Rai</span></p>
                 <p class="summary">a passionate and driven Front-End Developer with a knack for creating visually stunning and user-friendly web applications. I'm thrilled to be on this journey to shape the digital world with my coding skills and creativity.</p>
 
                 <div class="button-container">
                 <button class="btn1">Download Resume <p class="download"></p></button>
-                <button class="btn2">Explore More</button>
+                <button class="btn2"><div></div> <p>Explore More</p></button>
                 </div>
                 
             </div>
@@ -51,19 +64,20 @@
 
 
         <div class="about-container" id="About">
-             <div class="about-image-container">
-                 <img src="./static/Code typing-amico 1.jpg" alt="" class="about-image">
+             <div class="about-image-container" data-aos="fade-right">
+                 <img src="./static/about_section.svg" alt="" class="about-image">
              </div>
-             <div class="about-info">
+             <div class="about-info" data-aos="fade-left">
 
-                <h3 class="about-heading">About</h3>
-                <p class="about-me">About Me?</p>
-                <p class="about-paragraph">I am Nishant Rai, a dedicated and driven individual hailing from the vibrant city of Mumbai. Currently, I am pursuing my Bachelor of Engineering in Computer Science and Engineering at Chandigarh University, where I have been honing my skills and knowledge in the ever-evolving field of technology. With a strong foundation in programming languages such as JavaScript, HTML, and CSS, I have also mastered the art of crafting user-friendly and visually appealing web interfaces using frameworks like React and leveraging the power of utility-first CSS with Tailwind.</p>
+                <h3 class="about-heading" >About</h3>
+                <p class="about-me" >About Me?</p>
+               <img src="./static/React-icon.svg.png" alt="" height="60" width="60" class="rotate-react">
+                <p class="about-paragraph" >I am Nishant Rai, a dedicated and driven individual hailing from the vibrant city of Mumbai. Currently, I am pursuing my Bachelor of Engineering in Computer Science and Engineering at Chandigarh University, where I have been honing my skills and knowledge in the ever-evolving field of technology. With a strong foundation in programming languages such as JavaScript, HTML, and CSS, I have also mastered the art of crafting user-friendly and visually appealing web interfaces using frameworks like React and leveraging the power of utility-first CSS with Tailwind.</p>
              </div>
         </div>
 
 
-        <div class="skill-container" id="Skill">
+        <div class="skill-container" id="Skill" data-aos="fade-left">
               <h3 class="skill-heading">Skills</h3>
               <p class="skill-content">What I am capable of?</p>
               <div class="skill-image-contaner">
@@ -71,7 +85,7 @@
                 <p class="javascript skill-image" ></p>
                 <p class="css skill-image"></p>
                 <p class="tailwindcss skill-image"></p>
-                <p class="react skill-image"></p>
+                <p class="react skill-image rotate-react-2"></p>
                 <p class="html skill-image"></p>
                 <p class="git skill-image"></p>
 
@@ -80,12 +94,12 @@
 
         </div>
 
-        <div class="project-container" id="Project">
+        <div class="project-container" id="Project" >
              <h3 class="project-heading">Projects</h3>
              <p class="project-question">What I have made?</p>
              <div class="cards-container">
 
-                <div class="card">
+                <div class="card" data-aos="flip-up">
                      <img src="./static/porject1.png" alt="" class="project-image">
 
                      <div class="card-info">
@@ -95,7 +109,7 @@
                      </div>
                 </div>
 
-                <div class="card">
+                <div class="card"data-aos="flip-up">
                     <img src="./static/project2.png" alt="" class="project-image">
 
                     <div class="card-info">
@@ -105,7 +119,7 @@
                     </div>
                </div>
 
-               <div class="card">
+               <div class="card" data-aos="flip-up">
                 <img src="./static/project3.png" alt="" class="project-image">
 
                 <div class="card-info">
@@ -134,5 +148,28 @@
 
     </div>
     </div>
+
+
+    
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+     var typed = new Typed("#name",{
+    strings:[" A coder"," A web developer","A Frontend Developer"],
+    typeSpeed:50,
+    backSpeed:60,
+    loop:true,
+    showCursor: true,
+});
+
+    </script>
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        Offset: 400,
+        duration: 1000,
+    });
+  </script>
 </body>
 </html>
